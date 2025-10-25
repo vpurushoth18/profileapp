@@ -179,7 +179,7 @@
 //   );
 // }
 
-// src/App.jsx
+// src/App.jsx this is working
 import React from "react";
 import { View, Heading, Divider, Button, Flex } from "@aws-amplify/ui-react";
 import { useAuthenticator } from "@aws-amplify/ui-react";

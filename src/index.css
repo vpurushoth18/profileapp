@@ -97,3 +97,34 @@ button:focus-visible {
 .box:nth-child(3n + 3) {
   grid-column: 3;
 }
+
+/* Page layout */
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+/* Keep it near the top and centered horizontally */
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;      /* horizontal centering */
+  justify-content: flex-start; /* stay at top */
+  padding-top: 4rem;        /* space from top */
+  text-align: center;
+  min-height: 100vh;
+}
+
+/* Heading style — not bold */
+.profile .title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight:250;   /* normal weight (not bold) */
+  margin-bottom: 0.5rem;
+}
+
+/* Divider style */
+.profile .rule {
+  width: 80%;
+  margin: 0.5rem auto 3rem;
+}
+
