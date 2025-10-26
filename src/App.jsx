@@ -111,72 +111,22 @@
 //     }
 //   };
 
-//   return (
-//     <View padding="1rem">
-//       <Flex direction="row" justifyContent="space-between" alignItems="center">
-//         <Heading level={3}>Profiles App</Heading>
-//         <Flex gap="0.5rem" alignItems="center">
-//           <span style={{ opacity: 0.8 }}>
-//             Signed in as <b>{user?.username || user?.signInDetails?.loginId}</b>
-//           </span>
-//           <Button onClick={signOut} variation="destructive">
-//             Sign out
-//           </Button>
-//         </Flex>
-//       </Flex>
+//     return (
+//     <View className="profile">
+//       <Heading level={1} className="title">
+//         My Profile
+//       </Heading>
 
-//       <Divider marginTop="1rem" marginBottom="1rem" />
+//       <Divider className="rule" />
 
-//       {/* Create form */}
-//       <Flex as="form" gap="0.75rem" wrap="wrap" onSubmit={(e) => e.preventDefault()}>
-//         <TextField
-//           label="Name"
-//           labelHidden
-//           placeholder="Full name"
-//           value={name}
-//           onChange={(e) => setName(e.target.value)}
-//           width="20rem"
-//         />
-//         <TextField
-//           label="Email"
-//           labelHidden
-//           placeholder="email@example.com"
-//           type="email"
-//           value={email}
-//           onChange={(e) => setEmail(e.target.value)}
-//           width="22rem"
-//         />
-//         <Button variation="primary" onClick={addProfile}>
-//           Add Profile
+//       <Flex justifyContent="center" marginTop="4rem">
+//         <Button variation="primary" size="large" onClick={signOut}>
+//           Sign Out
 //         </Button>
 //       </Flex>
-
-//       <Divider marginTop="1rem" marginBottom="1rem" />
-
-//       {/* Profiles grid */}
-//       <Grid
-//         templateColumns={{ base: "1fr", medium: "1fr 1fr", large: "1fr 1fr 1fr" }}
-//         gap="1rem"
-//       >
-//         {userProfiles.length === 0 ? (
-//           <View opacity={0.7}>No profiles yet. Add one above.</View>
-//         ) : (
-//           userProfiles.map((p) => (
-//             <Card key={p.id} className="card">
-//               <Heading level={5} style={{ marginBottom: "0.5rem" }}>
-//                 {p.name}
-//               </Heading>
-//               <div className="read-the-docs">{p.email}</div>
-//               <Divider marginTop="0.75rem" marginBottom="0.75rem" />
-//               <Button size="small" onClick={() => removeProfile(p.id)}>
-//                 Delete
-//               </Button>
-//             </Card>
-//           ))
-//         )}
-//       </Grid>
 //     </View>
 //   );
+
 // }
 
 // src/App.jsx this is working
@@ -185,6 +135,8 @@ import { View, Heading, Divider, Button, Flex } from "@aws-amplify/ui-react";
 import { useAuthenticator } from "@aws-amplify/ui-react";
 import "@aws-amplify/ui-react/styles.css";
 import "./index.css";
+
+
 
 export default function App() {
   const { signOut } = useAuthenticator();
